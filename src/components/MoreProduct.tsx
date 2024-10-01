@@ -10,7 +10,7 @@ interface Product {
   images: string[];
 }
 
-const ProductDetails: React.FC = () => {
+const MoreProducts: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<Product | null>(null);
 
@@ -35,4 +35,4 @@ const ProductDetails: React.FC = () => {
   );
 };
 
-export default ProductDetails;
+export default MoreProducts;
