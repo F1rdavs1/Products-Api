@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { fetchProducts } from '../api';
 import { Link } from 'react-router-dom';
-import { FaBookmark } from 'react-icons/fa';
 
 interface Product {
   id: number;
@@ -38,9 +37,6 @@ const ProductList: React.FC = () => {
               <p className="text-gray-700 mb-4">Price: <span className="text-green-500">${product.price}</span></p>
             </Link>
             <div className="flex justify-center">
-              <button className="text-blue-600 hover:text-blue-800 transition-colors">
-                <FaBookmark className="w-6 h-6" />
-              </button>
             </div>
           </li>
         ))}

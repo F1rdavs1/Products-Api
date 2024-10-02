@@ -23,14 +23,20 @@ const MoreProducts: React.FC = () => {
     getProduct();
   }, [id]);
 
-  if (!product) return <p>Loading...</p>;
+  if (!product) return <p className="text-center text-gray-500">Loading...</p>;
 
   return (
-    <div>
-      <h1>{product.title}</h1>
-      <img src={product.images[0]} alt={product.title} width={300} />
-      <p>{product.description}</p>
-      <p>Price: ${product.price}</p>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <div className="bg-white shadow-lg rounded-lg max-w-sm p-6">
+        <img
+          className="rounded-t-lg w-full h-64 object-cover mb-4"
+          src={product.images[0]}
+          alt={product.title}
+        />
+        <h1 className="text-xl font-bold mb-2">{product.title}</h1>
+        <p className="text-gray-700 mb-4">{product.description}</p>
+        <p className="text-lg font-semibold text-gray-800">Price: ${product.price}</p>
+      </div>
     </div>
   );
 };
